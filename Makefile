@@ -1,16 +1,15 @@
-CXXFLAGS += -std=c++11 -Wall -Wextra -pedantic
-PREFIX ?= /usr/local
+PREFIX   ?= /system/xbin
 
-termux-elf-cleaner: termux-elf-cleaner.cpp
+CXXFLAGS += -std=c++11 -Wall -Wextra -pedantic
+
+elf-cleaner: 		elf-cleaner.cpp
 
 clean:
-	rm -f termux-elf-cleaner
+			  rm -f elf-cleaner
 
-install: termux-elf-cleaner
-	mkdir -p $(PREFIX)/bin
-	install termux-elf-cleaner $(PREFIX)/bin/termux-elf-cleaner
+install: 			elf-cleaner
+			install elf-cleaner $(PREFIX)/elf-cleaner
 
 uninstall:
-	rm -f $(PREFIX)/bin/termux-elf-cleaner
+	rm -f $(PREFIX)/elf-cleaner
 
-.PHONY: clean install uninstall
