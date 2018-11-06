@@ -2,7 +2,8 @@
 Utility for Android ELF files to remove unused parts that the linker warns about.
 
 # Description
-When loading ELF files, the Android linker warns about unsupported dynamic section entries with warnings such as:
+When loading ELF files, 
+  Android linker warns about unsupported dynamic section entries with warnings such as:
 
     WARNING: linker: /data/data/org.kost.nmap.android.networkmapper/bin/nmap: unused DT entry: type 0x6ffffffe arg 0x8a7d4
     WARNING: linker: /data/data/org.kost.nmap.android.networkmapper/bin/nmap: unused DT entry: type 0x6fffffff arg 0x3
@@ -25,11 +26,14 @@ It also removes the three ELF sections of type:
 
 # Usage
 ```sh
-usage: termux-elf-cleaner <filenames>
+usage: 
+       ./elf-cleaner <filename> [[filename] [filename] ..]
 
-Processes ELF files to remove unsupported section types and
-dynamic section entries which the Android linker warns about.
+         removes unsupported section types from ELF files,
+           which the Android linker use to complain about.
 ```
 
-# Author
-Fredrik Fornwall ([@fornwall](https://github.com/fornwall)).
+# Based on termux-elf-cleaner by:
+   Fredrik Fornwall ([@fornwall](https://github.com/fornwall)).
+
+   
