@@ -27,7 +27,7 @@ It also removes the three ELF sections of type:
 # Usage
 ```sh
 usage: 
-       ./elf-cleaner <filenames> [[filename] [filename] ..]
+       ./elf-cleaner <filename> [[filename] [filename] ..]
 
          removes unsupported section types from ELF files,
            which the Android linker use to complain about.
