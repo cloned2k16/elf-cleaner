@@ -1,4 +1,4 @@
-# termux-elf-cleaner
+# Elf-cleaner
 Utility for Android ELF files to remove unused parts that the linker warns about.
 
 # Description
